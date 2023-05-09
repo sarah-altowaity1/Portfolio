@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah's Personal Portfolio</title>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+    <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+  
+        a {
+            height: 900px;
+            width: 650px;
+        }
+  
+        .carousel {
+            height: 800px;
+            perspective: 950px;
+            transform: translateY(-100px);
+        }
+  
+        .carousel carousel-item {
+            width: 7050px;
+        }
+  
+        img {
+            width: 100%;
+            height: 200px;
+        }
+  
+        h4 {
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            color: #000;
+            box-sizing: border-box;
+            padding: 10px 5px;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style> 
+</head>
+<body>
+
+
+    <div id="particles-js">
+        <!-- overlay div -->
+        <a href="index.html">
+            <div class="close-btn" id="overlay">&times;</div>
+        </a>
+        <div class="carousel"> 
+
+            <div class="carousel-item">
+                <a href="https://www.geeksforgeeks.org/how-to-create-responsive-image-gallery-using-html-css-jquery-and-bootstrap/">
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20200130114641/responsivegallary1.png">
+                </a>
+                <h4>Responsive image gallery</h4>
+            </div>
+                
+            <div class="carousel-item">
+                <a href="https://www.geeksforgeeks.org/how-to-create-a-tab-image-gallery/">
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20191205124138/5510.png">
+                </a>
+                <h4>Tab image gallery</h4>
+            </div>
+        
+            <div class="carousel-item">
+                <a href="https://www.geeksforgeeks.org/html-course-building-header-of-the-website/">
+                    <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/Screenshot-25-1024x453.png">
+                </a>
+                <h4>Building header of a website</h4>
+            </div>
+        
+            <div class="carousel-item">
+                <a href="https://www.geeksforgeeks.org/how-to-design-image-slider-using-jquery/">
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20200214124104/imageslider1.png">
+                </a>
+                <h4>image slider</h4>
+            </div>
+        
+            <div class="carousel-item">
+                <a href= "https://www.geeksforgeeks.org/how-to-create-image-lightbox-gallery-using-html-css-and-javascript/">
+                    <img src= "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200320161020/Screenshot-from-2020-03-20-16-06-36.png">
+                </a>
+                <h4>image lightbox gallery</h4>
+            </div>
+        </div>
+
+
+    </div> 
+
+
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- stats.js lib -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
+    <script src="js/script.js"> </script>
+    <!-- upper right alert sign to open overlay summary 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- <script type="text/javascript" src="slick/slick.min.js"></script> -->
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.carousel').carousel({
+                    padding: 200
+            });
+            autoplay();
+            function autoplay() {
+                $('.carousel').carousel('next');
+                setTimeout(autoplay, 4500);
+            }
+        });
+
+        // Or with jQuery
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     var elems = document.querySelectorAll('.carousel');
+        //     var instances = M.Carousel.init(elems);
+        // });
+    </script>
+    <script>
+        function toggleSummary() {
+        var overlay = document.querySelector('.overlay-summary');
+        overlay.classList.toggle('active');
+
+        var isActive = overlay.classList.contains('active');
+        if (isActive) {
+            overlay.style.zIndex = "3";
+            overlay.style.opacity = "1";
+        } else {
+            overlay.style.zIndex = "-1";
+            overlay.style.opacity = "0";
+        }
+        }
+
+        function closeSummary() {
+            var overlay = document.querySelector('.overlay-summary');
+            overlay.classList.remove('active');
+            overlay.style.zIndex = "-1";
+            overlay.style.opacity = "0";
+        }
+    </script>
+</body>
+</html>

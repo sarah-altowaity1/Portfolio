@@ -1,0 +1,456 @@
+/* ---- reset ---- */ 
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;900&display=swap');
+*{
+    font-family: Orbitron, sans-serif;
+    color: white;
+}
+
+body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; 
+   background-color:  #070b2f};
+
+canvas{ 
+    display: block; 
+    vertical-align: bottom;
+}
+
+*{
+    text-decoration: none;
+}
+
+/* ---- particles.js container ---- */ 
+ 
+#particles-js{ 
+    position:relative; 
+    width: 100%; 
+    height: 100vh; 
+    background-color: #070b2f;
+    background-image: url(""); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    /* background-position: 50% 50%; */
+    z-index: 1;
+} 
+
+ /* ---- stats.js ---- */ 
+.count-particles{
+    background: #000022; 
+    position: absolute; 
+    top: 48px; 
+    left: 0; 
+    width: 80px; 
+    color: #13E8E9; 
+    font-size: .8em; 
+    text-align: left;
+    text-indent: 4px; 
+    line-height: 14px; 
+    padding-bottom: 2px; 
+    font-family: Helvetica, Arial, sans-serif; 
+    font-weight: bold; 
+} 
+.js-count-particles{ 
+    font-size: 1.1em;
+} 
+
+#stats, .count-particles{ 
+    -webkit-user-select: none; 
+    margin-top: 5px; 
+    margin-left: 5px; 
+} 
+
+#stats{
+    border-radius: 3px 3px 0 0; 
+    overflow: hidden; 
+} 
+ 
+ .count-particles{ border-radius: 0 0 3px 3px; }
+
+nav{
+    position: fixed;
+    display: inline-block;
+    z-index: 2;
+    padding: 0;
+}
+.nav-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+    padding-left: 0;
+}
+
+
+.nav-list li ion-icon{
+    padding-right: 3%;
+    padding-left: 3%;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+
+}
+.overlay-summary{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding-top: 10%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: -1;
+    opacity: 0;
+    overflow: auto;
+
+}
+/* overlay summary close button styling */
+.overlay-summary .close-btn{
+    position: absolute;
+    top:2%;
+    left: 4%;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+    font-size: 3em;
+}
+
+/* overlay summary text styling */
+.overlay-summary p{
+    padding: 10%;
+    color: #f8ff79;
+    font-weight: 200;
+    font-size: 1em;
+}
+
+ion-icon:hover{
+    color: white;
+    filter: drop-shadow(0 0 10px white);
+}
+
+.class-15 text{
+    visibility: hidden;
+}
+
+.class-15 text:hover{
+    visibility: visible;
+}
+/* .carousel{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+} */
+
+/* .carousel-item{
+    width: 40%; 
+    margin-bottom: 20%;
+    padding-right: 5%;
+    padding-left: 5%;
+    border: 1px solid white;
+    height: 20vh;
+    z-index: 4;
+} */
+
+/* .carousel{
+    height: 100vh; 
+    perspective: 30vw;
+}
+.carousel .carousel-item{
+	width: 640px;
+	height: 400px;
+}
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	max-width: 500px;
+	margin: auto;
+	text-align: center;
+	border-radius: 10px;
+	height: 450px;
+  }
+.img-area{
+	border-radius: 10px 10px 0 0;
+	height: 200px;
+	background-size: cover;
+	background-position: center center;
+}
+h4 {
+	font-size: 35px;
+	line-height: 1.5;
+	margin: 15px 0;
+	font-family: 'Bebas Neue', cursive;
+}
+.card p{
+	font-size: 17px;
+}
+
+.container {
+  padding: 2px 16px;
+} */
+
+.img-area{
+    width: 50vw;
+}
+img{
+    width: 50%; 
+}
+.carousel{
+    z-index: inherit;
+}
+.carousel {
+    height: 100vh;
+    perspective: 30vw;
+}
+  
+.carousel .carousel-item {
+width: 640px;
+height: 400px;
+}
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides{
+  display: none;
+  margin-top: 10%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: purple;
+  font-weight: 600;
+  font-size: 20%;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 6%;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.github{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    font-size: 5vw;
+    padding:2%;
+    color: palevioletred;
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.button{
+    background-color: pink;
+    width: auto;
+    padding: 1%;
+   border-radius: 10px;
+   cursor: pointer;
+}
+.button:hover{
+    background-color: purple;
+    color: pink;
+}
+.button{
+    font-size: medium;
+}
+
+svg{
+    position: absolute;
+    display: block;
+    bottom: 0; 
+    background-color: transparent;
+}
+
+/* #svg-container {
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+  } */
+
+#hair:hover{
+    fill: #00ff00;
+    cursor: pointer;
+}
+#hair{
+    fill: #550067; 
+}
+
+
+
+/* #logo:hover{
+    fill:#00ff00;
+    cursor: pointer;
+} */
+.cls-1:hover{
+    cursor: pointer;
+    fill:cyan; 
+}
+text .cls-15 {
+    visibility: hidden;
+}
+.cls-15{
+    visibility: hidden;
+}
+/* /* text .cls-15:hover{
+    visibility: visible;
+} */
+.cls-15:hover{
+    visibility: visible;
+    cursor: pointer;
+} 
+
+.cls-14:hover{
+    fill: orangered; 
+    cursor:pointer;
+}
+
+/* .cls-6:hover{
+    fill: yellow; 
+}
+ */
+
+ .cls-6:hover, .CS:hover{
+    cursor: pointer;
+ }
+ .CS:hover{
+    visibility: visible;
+ }
+.intro-text{
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    top:0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 30vw; 
+}
+
+.intro-text h4{
+    position: fixed;
+    color:white;
+    font-family: 400;
+    font-size: 3vw;
+}
+
+#sare{
+    border-radius: 50%; 
+    width: 25%; 
+    filter: drop-shadow(0 0 50px rgb(247, 247, 188));
+}
+
+.overlay-summary2 p{
+    font-size: 2.3em;
+    font-weight: 600; 
+    color: lightblue;
+    padding-left: 25%; 
+    padding-right: 25%; 
+}
+
+@media screen and (max-width: 600px)
+{
+    .slideshow-container{
+        margin-top: 30%;
+    }
+}
+
+@media screen and (max-width: 600px) and (min-height: 700px)
+{
+    .slideshow-container{
+        margin-top: 40%;
+    }
+    .text{
+        font-size: 0.5em;
+    }
+    .intro-text{
+        margin-top: 20%;
+    }
+    .button{
+        font-size: 10px;
+    }
+    .dot{
+        width: 5px;
+        height: 5px;
+    }
+    .overlay-heading{
+        font-size: 15px;
+        margin-top: 20%;
+    }
+
+    #sare{
+        margin-top: 100px; 
+        border-radius: 50%; 
+        width: 50%; 
+        filter: drop-shadow(0 0 50px rgb(247, 247, 188));
+    }
+    
+    .overlay-summary2 p{
+        font-size: 1.5em;
+        font-weight: 600; 
+        color: lightblue;
+        padding-left: 15%; 
+        padding-right: 15%; 
+    }
+}
