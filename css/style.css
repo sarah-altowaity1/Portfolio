@@ -273,11 +273,8 @@ svg{
 .CS, .IM{
     visibility: hidden;
     cursor: pointer;
-    transition-duration: 0.2s; 
 }
-.CS:hover, .IM:hover{
-    transition-duration: 0.2s; 
-}
+
 .cls-7{
     transition-duration: 0.4s;
 }
@@ -310,6 +307,7 @@ svg{
     width: 30vw; 
     display: inline-block;
     justify-content: center;
+    transition-duration: 0.4;
 }
 
 .intro-text h4{
@@ -317,7 +315,6 @@ svg{
     color:orange;
     font-family: 400;
     font-size: 2vw;
-    transition-duration: 0.4s;
 }
 
 .intro-text h5{
