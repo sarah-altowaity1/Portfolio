@@ -243,16 +243,16 @@ height: 400px;
     padding: 1%;
     border-radius: 10px;
     cursor: pointer;
-    transition-duration: 0.6s;
+    transition-duration: 0.4s;
 }
 .button:hover{
     background-color: purple;
     color: pink;
-    transition-duration: 0.6s;
+    transition-duration: 0.4s;
 }
 .button{
     font-size: medium;
-    transition-duration: 0.6s;
+    transition-duration: 0.4s;
 }
 
 svg{
@@ -265,10 +265,10 @@ svg{
 .cls-12:hover{
     fill: #1e1d53; 
     cursor: pointer;
-    transition-duration: 0.6s;
+    transition-duration: 0.4s;
 }
 .hair{
-    transition-duration: 0.6s;
+    transition-duration: 0.4s;
 }
 .CS, .IM{
     visibility: hidden;
@@ -279,16 +279,16 @@ svg{
     transition-duration: 0.2s; 
 }
 .cls-7{
-    transition-duration: 0.6s;
+    transition-duration: 0.4s;
 }
 
 .laptop:hover{
     fill: rgb(97, 32, 80);
     cursor: pointer;
-    transition-duration: 0.6s;
+    transition-duration: 0.4s;
 }
 .laptop{
-    transition-duration: 0.6s;
+    transition-duration: 0.4s;
 }
 .headphones:hover{
     fill: #9a4493;
@@ -317,14 +317,14 @@ svg{
     color:orange;
     font-family: 400;
     font-size: 2vw;
-    transition-duration: 0.6s;
+    transition-duration: 0.4s;
 }
 
 .intro-text h5{
     display: none;
     color: orange;
     font-size: 2vw;
-    transition-duration: 0.6s;
+    transition-duration: 0.4s;
 }
 
 #sare{
@@ -391,8 +391,8 @@ img#adobe{
     font-size: 1em;
 }
 svg{
-    width: 40%;
-    right: 30%; 
+    width: 35%;
+    right: 33%; 
 }
 
 @media screen and (max-width:600px){
@@ -490,10 +490,12 @@ svg{
     .intro-text h4{
         margin-top: 0;
         font-size: 1.7vw;
+        margin-top: 200px;
     }
     .intro-text h5{
         color: orange;
         font-size: 1.7vw;
+        margin-top: 200px;
     }
     svg{
         width: 35%; 
