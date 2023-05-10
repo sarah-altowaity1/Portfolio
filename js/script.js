@@ -2,52 +2,98 @@ particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enabl
 
 var glasses1 = document.getElementsByClassName("glasses1");
 var glasses2 = document.getElementsByClassName("glasses2");
+var section = document.getElementById("section");
+var introText = document.getElementById("typewrite");
 var CS =  document.getElementsByClassName("CS");
 var IM =  document.getElementsByClassName("IM");
+var hair = document.getElementById("hair")
+var laptop = document.getElementById("laptop")
+var headphones = document.getElementById("headphones")
 for (let i = 0; i < glasses1.length; i++) {
     glasses1[i].addEventListener('mouseover', () => {
-        glasses1[i].style.fill ="#FFFF00"
+        glasses1[i].style.fill ="#ff98c8"
         CS[0].style.visibility = "visible"
-
+        introText.style.display = "none"
+        section.textContent = "TECHNICAL PROJECTS"
+        section.style.display = "block"
     });
     glasses1[i].addEventListener('mouseout', () => {
         glasses1[i].style.fill ="#f5ffff"
         CS[0].style.visibility = "hidden"
+        section.style.display = "none"
+        introText.style.display = "block"
     });
     glasses2[i].addEventListener('mouseover', () => {
-        glasses2[i].style.fill ="#FFFF00"
+        glasses2[i].style.fill ="#ff98c8"
         IM[0].style.visibility = "visible"
-
+        introText.style.display = "none"
+        section.textContent = "CREATIVE PROJECTS"
+        section.style.display = "block"
     });
     glasses2[i].addEventListener('mouseout', () => {
         glasses2[i].style.fill ="#f5ffff"
-        // CS[0].style.visibility = "hidden"
         IM[0].style.visibility = "hidden"
+        section.style.display = "none"
+        introText.style.display = "block"
     });
     CS[i].addEventListener('mouseover', () => {
         CS[0].style.visibility = "visible"
-        glasses1[i].style.fill ="#FFFF00"
+        glasses1[i].style.fill ="#ff98c8"
+        introText.style.display = "none"
+        section.textContent = "TECHNICAL PROJECTS"
+        section.style.display = "block"
 
     });
 
     IM[i].addEventListener('mouseover', () => {
         IM[0].style.visibility = "visible"
-        glasses2[i].style.fill ="#FFFF00"
-
+        glasses2[i].style.fill ="#ff98c8"
+        introText.style.display = "none"
+        section.textContent = "CREATIVE PROJECTS"
+        section.style.display = "block"
     });
     CS[i].addEventListener('mouseout', () => {
         CS[0].style.visibility = "hidden"
         glasses1[i].style.fill ="#f5ffff"
+        section.style.display = "none"
+        introText.style.display = "block"
 
     });
     IM[i].addEventListener('mouseout', () => {
         IM[0].style.visibility = "hidden"
         glasses2[i].style.fill ="#f5ffff"
-
+        section.style.display = "none"
+        introText.style.display = "block"
     });
 } 
 
-
+hair.addEventListener('mouseover', ()=>{
+    section.textContent = "ABOUT ME"
+    section.style.display = "block"
+    introText.style.display = "none"
+});
+laptop.addEventListener('mouseover', ()=>{
+    section.textContent = "SKILLS"
+    section.style.display = "block"
+    introText.style.display = "none"
+});
+headphones.addEventListener('mouseover', ()=>{
+    section.textContent = "CURRENT MUSIC RECS<3"
+    section.style.display = "block"
+    introText.style.display = "none"
+});
+hair.addEventListener('mouseout', ()=>{
+    section.style.display = "none"
+    introText.style.display = "block"
+});
+laptop.addEventListener('mouseout', ()=>{
+    section.style.display = "none"
+    introText.style.display = "block"
+});
+headphones.addEventListener('mouseout', ()=>{
+    section.style.display = "none"
+    introText.style.display = "block"
+});
 
 
 /* Function that simulates a typewriteer effect bu typing out one characcter at a time 

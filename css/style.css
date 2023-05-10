@@ -101,16 +101,19 @@ canvas{
 .contact ion-icon:hover{
     color: white;
     filter: drop-shadow(0 0 10px white);
+
 }
 
 .class-7 text{
     visibility: hidden;
     cursor: pointer;
+    transition-duration: 0.5s;
 }
 
 .class-7 text:hover{
     visibility: visible;
     cursor: pointer;
+
 }
 
 .img-area{
@@ -235,17 +238,21 @@ height: 400px;
 
 .button{
     background-color: pink;
+    color:purple;
     width: auto;
     padding: 1%;
-   border-radius: 10px;
-   cursor: pointer;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-duration: 0.6s;
 }
 .button:hover{
     background-color: purple;
     color: pink;
+    transition-duration: 0.6s;
 }
 .button{
     font-size: medium;
+    transition-duration: 0.6s;
 }
 
 svg{
@@ -256,28 +263,41 @@ svg{
 }
 
 .cls-12:hover{
-    fill: rgb(238, 136, 98); 
-    stroke: red; 
+    fill: #1e1d53; 
     cursor: pointer;
+    transition-duration: 0.6s;
+}
+.hair{
+    transition-duration: 0.6s;
 }
 .CS, .IM{
     visibility: hidden;
     cursor: pointer;
+    transition-duration: 0.2s; 
 }
-
-.cls-7:hover{
-    fill: rgb(231, 231, 175);
-    cursor: pointer;
+.CS:hover, .IM:hover{
+    transition-duration: 0.2s; 
+}
+.cls-7{
+    transition-duration: 0.6s;
 }
 
 .laptop:hover{
-    fill: rgb(67, 67, 124);
+    fill: rgb(97, 32, 80);
     cursor: pointer;
+    transition-duration: 0.6s;
+}
+.laptop{
+    transition-duration: 0.6s;
 }
 .headphones:hover{
-    fill: orangered; 
-    stroke: red; 
+    fill: #9a4493;
+    stroke: #662d91;
     cursor: pointer;
+    transition-duration: 0.4s;
+}
+.headphones{
+    transition-duration: 0.4s;
 }
 .intro-text{
     position: absolute; 
@@ -289,13 +309,22 @@ svg{
     margin-right: auto; 
     width: 30vw; 
     display: inline-block;
+    justify-content: center;
 }
 
-.intro-text h4, .typewrtie{
+.intro-text h4{
     position: absolute;
     color:orange;
     font-family: 400;
     font-size: 2vw;
+    transition-duration: 0.6s;
+}
+
+.intro-text h5{
+    display: none;
+    color: orange;
+    font-size: 2vw;
+    transition-duration: 0.6s;
 }
 
 #sare{
@@ -431,8 +460,13 @@ svg{
         padding-top:5%; 
         padding-bottom: 5%;
     }
-    .intro-text h4, .typewrtie{
+    .intro-text h4 {
         margin-top: 200px;
+        font-size: 4vw;
+    }
+    .intro-text h5{
+        margin-top: 200px;
+        color: orange;
         font-size: 4vw;
     }
     #overlay{
@@ -453,8 +487,12 @@ svg{
 /*For iMAC*/
 
 @media screen and (min-width: 5000px) and (min-height: 2000px) {
-    .intro-text h4, .typewrtie{
+    .intro-text h4{
         margin-top: 0;
+        font-size: 1.7vw;
+    }
+    .intro-text h5{
+        color: orange;
         font-size: 1.7vw;
     }
     svg{
