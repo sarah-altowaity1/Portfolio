@@ -4,18 +4,19 @@
 *{
     font-family: Orbitron, sans-serif;
     color: white;
+    box-sizing:border-box;
+    text-decoration: none;
 }
 
-body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; 
-   background-color:  #070b2f};
+body{ 
+    margin:0; 
+    font:normal 75% Arial, Helvetica, sans-serif; 
+    background-color:  #070b2f
+};
 
 canvas{ 
     display: block; 
     vertical-align: bottom;
-}
-
-*{
-    text-decoration: none;
 }
 
 /* ---- particles.js container ---- */ 
@@ -28,8 +29,7 @@ canvas{
     background-image: url(""); 
     background-repeat: no-repeat; 
     background-size: cover; 
-    /* background-position: 50% 50%; */
-    z-index: 1;
+    z-index: 1; /* place it behind other divs*/
 } 
 
  /* ---- stats.js ---- */ 
@@ -48,7 +48,7 @@ canvas{
     font-family: Helvetica, Arial, sans-serif; 
     font-weight: bold; 
 } 
-.js-count-particles{ 
+/* .js-count-particles{ 
     font-size: 1.1em;
 } 
 
@@ -63,31 +63,9 @@ canvas{
     overflow: hidden; 
 } 
  
- .count-particles{ border-radius: 0 0 3px 3px; }
+ .count-particles{ border-radius: 0 0 3px 3px; } */
 
-nav{
-    position: fixed;
-    display: inline-block;
-    z-index: 2;
-    padding: 0;
-}
-.nav-list{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 2%;
-    padding-left: 0;
-}
-
-
-.nav-list li ion-icon{
-    padding-right: 3%;
-    padding-left: 3%;
-    font-size: 2em;
-    color: white;
-    cursor: pointer;
-
-}
+/* styling for all overlay summaries*/
 .overlay-summary{
     position: absolute;
     top:0;
@@ -155,22 +133,22 @@ height: 400px;
 }
 
 
-* {box-sizing:border-box}
 
-/* Slideshow container */
+
+/* slideshow container */
 .slideshow-container {
     position: relative;
     max-width: 1000px;
     margin: auto;
 }
 
-/* Hide the images by default */
+/* hide the images by default */
 .mySlides{
   display: none;
   margin-top: 10%;
 }
 
-/* Next & previous buttons */
+/* next & prev buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -228,7 +206,7 @@ height: 400px;
     padding:2%;
     color: palevioletred;
 }
-/* The dots/bullets/indicators */
+
 .dot {
   cursor: pointer;
   height: 15px;
@@ -277,26 +255,6 @@ svg{
     background-color: transparent;
 }
 
-/* #svg-container {
-    display: inline-block;
-    position: relative;
-    background-color: transparent;
-  } */
-
-#hair:hover{
-    fill: #00ff00;
-    cursor: pointer;
-}
-#hair{
-    fill: #550067; 
-}
-
-
-
-/* #logo:hover{
-    fill:#00ff00;
-    cursor: pointer;
-} */
 .cls-12:hover{
     fill: orangered; 
     stroke: red; 
@@ -322,10 +280,13 @@ svg{
     cursor: pointer;
 }
 .intro-text{
-    position: relative; 
+    position: absolute; 
     left: 0; 
     right: 0; 
     top:0; 
+    margin-top: 5%;
+    margin-left: auto; 
+    margin-right: auto; 
     width: 30vw; 
     display: inline-block;
 }
@@ -402,9 +363,18 @@ svg{
     right: 30%; 
 }
 
-/*Mobile*/
+@media screen and (max-width:600px){
+    svg{
+        width:80%;
+        left:10%;
+    }
+}
+/* For Mobile*/
 @media screen and (max-width: 600px) and (min-height: 700px)
 {
+    .mySlides{
+        overflow: hidden;
+    }
     .numbertext{
         font-size: 10px;
     }
@@ -415,13 +385,7 @@ svg{
         font-size: 0.5em;
     }
     .intro-text{
-        margin-top: 50%;
-    }
-    .intro-text h4, .typewrtie{
-        position: absolute;
-        color:orange;
-        font-family: 400;
-        font-size: 5vw;
+        margin-top: 20%;
     }
     .button{
         font-size: 10px;
@@ -449,10 +413,6 @@ svg{
         padding-left: 15%; 
         padding-right: 15%; 
     }
-    svg{
-        width: 80%; 
-        left: 10%; 
-    }
     .skill img{
         width: 50px; 
     }
@@ -468,9 +428,13 @@ svg{
         padding-top:5%; 
         padding-bottom: 5%;
     }
+    .intro-text h4, .typewrtie{
+        margin-top: 200px;
+        font-size: 4vw;
+    }
 }
 
-/* for mobile: displays skills vertically*/
+/* for mobile: displays*/
 @media screen and (max-width: 1000px) {
     .technical{
         display: block; 
