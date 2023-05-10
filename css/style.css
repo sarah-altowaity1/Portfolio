@@ -302,12 +302,18 @@ svg{
 }
 .CS, .IM{
     visibility: hidden;
+    cursor: pointer;
 }
 
 .cls-7:hover{
     fill: rgb(231, 231, 175);
+    cursor: pointer;
 }
 
+.laptop:hover{
+    fill: rgb(67, 67, 124);
+    cursor: pointer;
+}
 .headphones:hover{
     fill: orangered; 
     stroke: red; 
@@ -443,13 +449,6 @@ svg{
     img#adobe{
         width: 50px; 
     }
-    /* img#c{
-        width: 50px; 
-    }
-    img#swift{
-        width: 50px; 
-    }  */
-    
     .technical ion-icon{
         font-size:50px;
     }
