@@ -98,7 +98,7 @@ canvas{
     font-size: 1em;
 }
 
-ion-icon:hover{
+.contact ion-icon:hover{
     color: white;
     filter: drop-shadow(0 0 10px white);
 }
@@ -256,7 +256,7 @@ svg{
 }
 
 .cls-12:hover{
-    fill: orangered; 
+    fill: rgb(238, 136, 98); 
     stroke: red; 
     cursor: pointer;
 }
@@ -284,7 +284,7 @@ svg{
     left: 0; 
     right: 0; 
     top:0; 
-    margin-top: 5%;
+    margin-top: 2%;
     margin-left: auto; 
     margin-right: auto; 
     width: 30vw; 
@@ -314,6 +314,9 @@ svg{
     padding-bottom: 0;
 }
 
+.contact{
+    margin-top: 10%
+}
 .contact ion-icon{
     font-size: 3em; 
     margin-left:2%; 
@@ -435,6 +438,9 @@ svg{
     #overlay{
         font-size: 2em;
     }
+    .contact{
+        margin-top: 25%;
+    }
 }
 
 /* for mobile: displays*/
@@ -476,5 +482,21 @@ svg{
     }
     .technical .skill h6{
         font-size: 2em;
+    }
+    .overlay-summary2 p{
+        margin-top: 5%;
+        font-size: 7em;
+    }
+    #sare{
+        width: 20%; 
+    }
+    .contact{
+        margin-top: 5%;
+    }
+    .contact ion-icon{
+        font-size: 10em; 
+    }
+    .numbertext{
+        font-size: 3em;
     }
 }
