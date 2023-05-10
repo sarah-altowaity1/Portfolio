@@ -432,11 +432,49 @@ svg{
         margin-top: 200px;
         font-size: 4vw;
     }
+    #overlay{
+        font-size: 2em;
+    }
 }
 
 /* for mobile: displays*/
 @media screen and (max-width: 1000px) {
     .technical{
         display: block; 
+    }
+}
+
+/*For iMAC*/
+
+@media screen and (min-width: 5000px) and (min-height: 2000px) {
+    .intro-text h4, .typewrtie{
+        margin-top: 0;
+        font-size: 1.7vw;
+    }
+    svg{
+        width: 35%; 
+        right: 33%; 
+    }
+
+    /* slideshow container */
+    .slideshow-container {
+        position: relative;
+        max-width: 2500px;
+        margin: auto;
+    }
+    .overlay-heading{
+        font-size: 50px;
+    }
+    .github{
+        font-size: 10em; 
+    }
+    #overlay{
+        font-size: 10em;
+    }
+    .overlay-summary p{
+        font-size: 3em;
+    }
+    .technical .skill h6{
+        font-size: 2em;
     }
 }
