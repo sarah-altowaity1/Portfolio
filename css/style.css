@@ -1,6 +1,6 @@
-/* ---- reset ---- */ 
-
+/* ---- import font ---- */ 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;900&display=swap');
+/* styling for all divs*/
 *{
     font-family: Orbitron, sans-serif;
     color: white;
@@ -8,6 +8,7 @@
     text-decoration: none;
 }
 
+/* styling for body*/
 body{ 
     margin:0; 
     font:normal 75% Arial, Helvetica, sans-serif; 
@@ -18,7 +19,6 @@ canvas{
     display: block; 
     vertical-align: bottom;
 }
-
 /* ---- particles.js container ---- */ 
  
 #particles-js{ 
@@ -32,40 +32,7 @@ canvas{
     z-index: 1; /* place it behind other divs*/
 } 
 
- /* ---- stats.js ---- */ 
-.count-particles{
-    background: #000022; 
-    position: absolute; 
-    top: 48px; 
-    left: 0; 
-    width: 80px; 
-    color: #13E8E9; 
-    font-size: .8em; 
-    text-align: left;
-    text-indent: 4px; 
-    line-height: 14px; 
-    padding-bottom: 2px; 
-    font-family: Helvetica, Arial, sans-serif; 
-    font-weight: bold; 
-} 
-/* .js-count-particles{ 
-    font-size: 1.1em;
-} 
-
-#stats, .count-particles{ 
-    -webkit-user-select: none; 
-    margin-top: 5px; 
-    margin-left: 5px; 
-} 
-
-#stats{
-    border-radius: 3px 3px 0 0; 
-    overflow: hidden; 
-} 
- 
- .count-particles{ border-radius: 0 0 3px 3px; } */
-
-/* styling for all overlay summaries*/
+/* styling for overlay summary div */
 .overlay-summary{
     position: absolute;
     top:0;
@@ -74,7 +41,7 @@ canvas{
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.8);
-    z-index: -1;
+    z-index: -1; /* initially make it behine all other divs */
     opacity: 0;
     overflow: auto;
 
@@ -98,45 +65,30 @@ canvas{
     font-size: 1em;
 }
 
+/* make icons in the about me page glow when hovered over */
 .contact ion-icon:hover{
     color: white;
     filter: drop-shadow(0 0 10px white);
 
 }
 
+/* styling to make color change on hover; add transition duration for smoother transition */
 .class-7 text{
     visibility: hidden;
     cursor: pointer;
     transition-duration: 0.5s;
 }
 
+/* styling to make color change on hover; add transition duration for smoother transition */
 .class-7 text:hover{
     visibility: visible;
     cursor: pointer;
 
 }
-
-.img-area{
-    width: 50vw;
-}
+/* styling for images width*/
 img{
     width: 50%; 
 }
-.carousel{
-    z-index: inherit;
-}
-.carousel {
-    height: 100vh;
-    perspective: 30vw;
-}
-  
-.carousel .carousel-item {
-width: 640px;
-height: 400px;
-}
-
-
-
 
 /* slideshow container */
 .slideshow-container {
@@ -167,18 +119,18 @@ height: 400px;
   user-select: none;
 }
 
-/* Position the "next button" to the right */
+/* position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
+/* on hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
-/* Caption text */
+/* caption text */
 .text {
   color: purple;
   font-weight: 600;
@@ -190,7 +142,7 @@ height: 400px;
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
+/* number text (1/3 etc) */
 .numbertext {
     color: #ff00bf;
     font-size: 20px;
@@ -201,6 +153,7 @@ height: 400px;
     top: 0;
 }
 
+/* github logo on technical projects overlay styling */
 .github{
     position: absolute;
     bottom: 0;
@@ -210,6 +163,7 @@ height: 400px;
     color: palevioletred;
 }
 
+/* navigation dots in the slideshow container styling */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -221,11 +175,12 @@ height: 400px;
   transition: background-color 0.6s ease;
 }
 
+/* change color of dots when hovered over */
 .dot:hover {
   background-color: #717171;
 }
 
-/* Fading animation */
+/* fading animation */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
@@ -236,6 +191,7 @@ height: 400px;
   to {opacity: 1}
 }
 
+/* button in projects overlay styling; add transiton duration for smoother animation*/
 .button{
     background-color: pink;
     color:purple;
@@ -243,6 +199,7 @@ height: 400px;
     padding: 1%;
     border-radius: 10px;
     cursor: pointer;
+    font-size: medium;
     transition-duration: 0.4s;
 }
 .button:hover{
@@ -250,18 +207,18 @@ height: 400px;
     color: pink;
     transition-duration: 0.4s;
 }
-.button{
-    font-size: medium;
-    transition-duration: 0.4s;
-}
 
+/* SVG styling */
 svg{
     position: absolute;
     display: block;
     bottom: 0; 
     background-color: transparent;
+    width: 35%;
+    right: 33%; 
 }
 
+/* hair styling */
 .cls-12:hover{
     fill: #1e1d53; 
     cursor: pointer;
@@ -270,15 +227,18 @@ svg{
 .hair{
     transition-duration: 0.4s;
 }
+/* text in svg styling */
 .CS, .IM{
     visibility: hidden;
     cursor: pointer;
 }
 
+/* glasses transition duration for smoother transition */
 .cls-7{
     transition-duration: 0.4s;
 }
 
+/* laptop transition on hover */
 .laptop:hover{
     fill: rgb(97, 32, 80);
     cursor: pointer;
@@ -287,6 +247,8 @@ svg{
 .laptop{
     transition-duration: 0.4s;
 }
+
+/* headphones transition on hover */
 .headphones:hover{
     fill: #9a4493;
     stroke: #662d91;
@@ -296,6 +258,8 @@ svg{
 .headphones{
     transition-duration: 0.4s;
 }
+
+/* intro text styling */
 .intro-text{
     position: absolute; 
     left: 0; 
@@ -324,12 +288,14 @@ svg{
     transition-duration: 0.4s;
 }
 
+/* image in about me section styling */
 #sare{
     border-radius: 50%; 
     width: 25%; 
     filter: drop-shadow(0 0 50px rgb(247, 247, 188));
 }
 
+/* paragraph in about me section styling */
 .overlay-summary2 p{
     font-size: 2.3em;
     font-weight: 600; 
@@ -340,9 +306,12 @@ svg{
     padding-bottom: 0;
 }
 
+/* contact div styling */
 .contact{
     margin-top: 10%
 }
+
+/* contact icons div styling */
 .contact ion-icon{
     font-size: 3em; 
     margin-left:2%; 
@@ -351,6 +320,7 @@ svg{
 
 }
 
+/* ----- skills div styling ----- */
 .adobe{
    padding-top: 21px; 
 }
@@ -373,12 +343,14 @@ img#adobe{
     padding-bottom: 5%;
 }
 
+/* display skills side by side */
 .technical{
     display: flex;
     margin: 0; 
     padding: 0;
     justify-content: center;
 }
+/* display the logo of the skill and its name vertically */
 .technical .skill{
     align-items: center;
     margin-left: 2%;
@@ -387,18 +359,15 @@ img#adobe{
 .technical .skill h6{
     font-size: 1em;
 }
-svg{
-    width: 35%;
-    right: 33%; 
-}
 
+/* svg styling for narrower screens*/
 @media screen and (max-width:600px){
     svg{
         width:80%;
         left:10%;
     }
 }
-/* For Mobile*/
+/* for mobile*/
 @media screen and (max-width: 600px) and (min-height: 700px)
 {
     .mySlides{
@@ -474,15 +443,14 @@ svg{
     }
 }
 
-/* for mobile: displays*/
+/* for mobile: displays skills section vertically */
 @media screen and (max-width: 1000px) {
     .technical{
         display: block; 
     }
 }
 
-/*For iMAC*/
-
+/* for iMac*/
 @media screen and (min-width: 5000px) and (min-height: 2000px) {
     .intro-text h4{
         margin-top: 0;
@@ -498,8 +466,6 @@ svg{
         width: 35%; 
         right: 33%; 
     }
-
-    /* slideshow container */
     .slideshow-container {
         position: relative;
         max-width: 2500px;
